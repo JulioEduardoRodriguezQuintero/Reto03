@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Hoja de Vida</title>
+    <script src="./js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Foto de perfil -->
+            <div class="photo">
+                <img src="./images/Image20240906132609.png" alt="Foto de Julio Rodríguez"width="200" height="200"text-align: center;<>
+                <style>
+                    .photo {
+                      text-align: center;
+                    }
+                  </style>
+          </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="personal">
+            <h1>Julio Eduardo Rodríguez Quintero</h1>
+            <p>Dirección: Av. Universitaria No.41-50 APTO 1303 T1 Tunja Boyacá</p>
+            <p>Celular: 3143072247</p>
+            <p>Email: juedur@gmail.com</p>
+        </section>
+    </div>
+
+    <div class="container">
+        <section id="datos">
+            <h2>Objetivo Profesional</h2>
+            <p>
+                Profesional en Administración de Empresas con amplia experiencia 
+                en gestión de recursos, planificación estratégica y optimización de procesos.
+                Orientado a la eficiencia operativa y a la toma de decisiones basadas en análisis financieros. 
+                Busco contribuir al crecimiento organizacional mediante la implementación de estrategias 
+                innovadoras y liderando equipos hacia el logro de los objetivos empresariales.
+            </p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <ul id="lista-experiencia">
+                <li>Supervisor Operativo, ABC Tech (2015-2018): Supervisar las operaciones diarias, desarrollo de procesos y administración de personal.</li>
+                <li>Cajero, Banco Agrario (2010-2013): Recepcionar, entregar y asegurar dinero en efectivo.</li>
+            </ul>
+            <button onclick="toggleForm('referencias')">Añadir Experiencia</button>
+            <div id="form-referencias" class="hidden">
+                <input type="text" id="nueva-referencia" placeholder="Nueva referencia">
+                <button onclick="agregarItem('referencias')">Agregar</button>
+            </div>
+        </section>
+
+        <section id="referencias">
+            <h2>Referencias</h2>
+            <ul id="lista-referencias">
+                <li>Dalila Suarez - Gerente Compañía XYZ</li>
+                <li>José María - Rector de Universidad ABC</li>
+            </ul>
+            <button onclick="toggleForm('referencias')">Añadir Referencia</button>
+            <div id="form-referencias" class="hidden">
+                <input type="text" id="nueva-referencia" placeholder="Nueva referencia">
+                <button onclick="agregarItem('referencias')">Agregar</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleForm(seccion) {
+            var form = document.getElementById('form-' + seccion);
+            form.classList.toggle('hidden');
+        }
+
+
+    </script>
+</body>
+</html>
